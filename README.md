@@ -2,7 +2,9 @@
 
 > 카카오 부트캠프 풀스택 1차 과제
 
+
 본 프로그램은 콘솔 환경에서 올리브영 제품을 주문해보는 Java 기반 프로그램입니다.
+
 
 ## 프로젝트 개요
 - **개발 언어** : Java
@@ -13,7 +15,7 @@
   - 포인트 사용 및 결제
 
 ## 프로젝트 폴더 구조
-![파일트리](CLI_file_tree.png)
+<img src="CLI_file_tree.png" width="300" height="200"/>
 
 ## 실행 방법
 1. src 폴더로 이동
@@ -35,11 +37,12 @@
 | `Main`                             | 프로그램 실행 및 사용자 입력 처리         |
 
 - 클래스 다이어그램
-![다이어그램1](CLI_diagram_1.jpeg)
-![다이어그램2](CLI_diagram_2.jpeg)
+
+  <img src="CLI_diagram_1.jpeg" width="300" height="200"/>
+  <img src="CLI_diagram_2.jpeg" width="300" height="200"/>
 
 ## 실행 화면
-![실행화면](CLI_run.png)
+![실행화면](CLI_run_screen.gif)
 
 ## 배운 점
 - 개발 전 클래스 다이어그램을 그리는 것이 매우 중요하다는 것을 깨달았다.
