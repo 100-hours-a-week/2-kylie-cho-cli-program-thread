@@ -42,7 +42,7 @@
   <img src="CLI_diagram_2.jpeg" width="300" height="200"/>
 
 ## 실행 화면
-![실행화면](CLI_run_screen.gif)
+![실행화면](CLI_run_screen_final.gif)
 
 ## 배운 점
 - 개발 전 클래스 다이어그램을 그리는 것이 매우 중요하다는 것을 깨달았다.
