@@ -2,9 +2,6 @@ package categories;
 
 import order.Product;
 
-import java.util.ArrayList;
-
-
 public class ShowerBath extends SubCategory {
 
     public ShowerBath() {

@@ -2,8 +2,6 @@ package categories;
 
 import order.Product;
 
-import java.util.ArrayList;
-
 public class EyeMakeup extends SubCategory {
 
     public EyeMakeup() {
