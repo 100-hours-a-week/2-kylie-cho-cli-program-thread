@@ -15,7 +15,7 @@
   - 포인트 사용 및 결제
 
 ## 프로젝트 폴더 구조
-<img src="CLI_file_tree.png" width="300" height="200"/>
+<img src="img/CLI_file_tree.png" width="300" height="200"/>
 
 ## 실행 방법
 1. src 폴더로 이동
@@ -38,11 +38,11 @@
 
 - 클래스 다이어그램
 
-  <img src="CLI_diagram_1.jpeg" width="300" height="200"/>
-  <img src="CLI_diagram_2.jpeg" width="300" height="200"/>
+  <img src="img/CLI_diagram_1.jpeg" width="300" height="200"/>
+  <img src="img/CLI_diagram_2.jpeg" width="300" height="200"/>
 
 ## 실행 화면
-![실행화면](CLI_run_screen_final.gif)
+![실행화면](img/CLI_run_screen_final.gif)
 
 ## 회고
 - 개발 전 클래스 다이어그램을 그리는 것이 매우 중요하다는 것을 깨달았다.
