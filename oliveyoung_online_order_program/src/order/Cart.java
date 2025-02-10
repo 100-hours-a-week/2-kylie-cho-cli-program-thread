@@ -27,7 +27,7 @@ public class Cart {
             total += item.getPrice();
         }
         System.out.println("\n---------------------------------------------------\n");
-        System.out.println("💰 제품 총 금액: " + total + "원");
+        System.out.println("💰 총 제품 금액: " + total + "원");
         System.out.println("\n---------------------------------------------------\n");
     }
 }

@@ -1,5 +1,6 @@
 import categories.*;
 import order.*;
+import utils.WeatherThread;
 
 import java.util.Scanner;
 
@@ -9,6 +10,17 @@ public class Main {
         Cart cart = new Cart();
 
         System.out.println("\n🤗 올리브영에 오신 걸 환영합니다 🤗");
+
+        // 날씨 스레드 실행
+        WeatherThread weatherThread = new WeatherThread();
+        weatherThread.start();
+
+//        // 날씨 스레드 출력 확인용 코드
+//        try {
+//            Thread.sleep(20000);
+//        } catch (InterruptedException ie) {
+//            ie.printStackTrace();
+//        }
 
         while (true) {
             // 1. 카테고리 선택
@@ -82,9 +94,23 @@ public class Main {
         // 5. 장바구니 출력
         cart.showCart();
 
-        // 6. 배송 방법 선택 및 결제
+        // 6. 주문 스레드 실행 + 날씨 할인 적용
         int points = 0;
         Order order = new Order(cart, points);
+        OrderThread orderThread = new OrderThread(order);
+        orderThread.start();
+
+        try {
+            orderThread.join();
+        } catch (InterruptedException ie) {
+            ie.printStackTrace();
+        }
+
+        // 7. 배송 방법 선택 및 결제
         order.orderProcess();
+
+        // 8. 스레드 종료
+        weatherThread.interrupt();
+        System.out.println("\n🧵 모든 스레드가 종료되었습니다.");
     }
 }

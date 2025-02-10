@@ -5,15 +5,24 @@ import java.util.Scanner;
 public class Order {
     private Cart cart;
     private int points;
+    private int finalPrice;     // 날씨 할인 적용 후 최종 가격
 
     public Order(Cart cart, int points) {
         this.cart = cart;
         this.points = points;
+        this.finalPrice = cart.getPrice();
+    }
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void applyDiscount(int discountedPrice) {
+        this.finalPrice = discountedPrice;
     }
 
     public void orderProcess() {
         Scanner scanner = new Scanner(System.in);
-        int totalPrice = cart.getPrice();
         int deliveryCost = 0;
 
         // 1. 배송 방법 선택
@@ -24,21 +33,20 @@ public class Order {
             int choice = scanner.nextInt();
 
             if (choice == 1) {
-                deliveryCost = (totalPrice >= 20000) ? 0 : 2500;
+                deliveryCost = (finalPrice >= 20000) ? 0 : 2500;
                 break;
             } else if (choice == 2) {
-                deliveryCost = (totalPrice >= 30000) ? 0 : 2500;
+                deliveryCost = (finalPrice >= 30000) ? 0 : 2500;
                 break;
             } else if (choice == 3) {
                 deliveryCost = 0;
                 break;
             } else {
                 System.out.println("\n⚠️ 배송 방법 번호를 잘못 입력했어요. ⚠️");
-                continue;
             }
         }
 
-        int resultPrice = totalPrice + deliveryCost;
+        int resultPrice = finalPrice + deliveryCost;
 
         // 2. 포인트 사용 여부 확인
         System.out.print("\n🔶 보유 포인트를 입력하세요: ");
@@ -50,7 +58,7 @@ public class Order {
 
         // 3. 최종 금액 산출
         System.out.println("\n---------------------------------------------------");
-        System.out.println("\n✅  제품 금액: " + totalPrice + "원");
+        System.out.println("\n✅  총 제품 금액: " + finalPrice + "원");
         System.out.println("✅  배송비: " + deliveryCost + "원");
 
         if (usePoints.equalsIgnoreCase("Y")) {
