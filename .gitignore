@@ -1,0 +1,5 @@
+# IntelliJ IDEA 설정 폴더
+.idea/
+
+# 빌드 결과물
+/out/
